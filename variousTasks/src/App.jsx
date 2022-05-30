@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css'
+import DataBinding from './components/DataBinding';
 import List from './components/list';
 import Toggle from './components/Toggle';
 
@@ -13,11 +14,13 @@ function App() {
     ];
 
     const [toggle, setToggle] = useState(false)
+    const [inputString, setInputString] = useState('')
 
     return (
         <div className="App">
             <List users={users} />
             <Toggle toggle={toggle} setToggle={setToggle} />
+            <DataBinding inputString={inputString} setInputString={setInputString} />
         </div>
     )
 }
